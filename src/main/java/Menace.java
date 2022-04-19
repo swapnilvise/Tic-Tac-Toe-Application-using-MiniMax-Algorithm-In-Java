@@ -1,31 +1,37 @@
+import java.util.Hashtable;
 import java.util.Scanner;
+
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import java.util.Random;
 import org.bson.Document;
 
 public class Menace {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        try {
+        Hashtable<String,String> ht = new Hashtable<>();
+
+
+//        try {
             MongoClient client = MongoClients.create("mongodb+srv://menaceuser:Psa6205Menace@cluster0.gn66j.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
             MongoDatabase db = client.getDatabase("menaceDB");
             MongoCollection coll = db.getCollection("menace");
             System.out.println("Connection to MongoDB Atlas successfully established");
-//        Document sampleDoc = new Document("_id","1").append("name","Swapnil Vise");
-//        coll.insertOne(sampleDoc);
-        } catch (Exception e){
-            System.out.println(e);
-        }
+//        } catch (Exception e){
+//            System.out.println(e);
+//        }
 
         // Get the player's name
         System.out.print("Hello Player 1, what is your name ?");
-        String p1 = input.nextLine();
+//        String p1 = input.nextLine();
+        String p1 = "Jarvis";
 
-//        System.out.print("Hello Player 2, what is your name ?");
+        System.out.print("Hello Player 2, what is your name ?");
 //        String p2 = input.nextLine();
+        String p2 = "Alexa";
 
         //3*3 Tic Tac Toe board
         // - denotes Empty space
@@ -69,11 +75,16 @@ public class Menace {
             int col = 0;
 
             while (true) {
+                Random random = new Random();
                 // Get row and column from user
                 System.out.println("Enter a row (0, 1 or 2) : ");
-                row = input.nextInt();
+//                row = input.nextInt();
+                row = random.nextInt(3);
+                System.out.println(row);
                 System.out.println("Enter a column (0, 1 or 2) : ");
-                col = input.nextInt();
+//                col = input.nextInt();
+                col = random.nextInt(3);
+                System.out.println(col);
 
                 // Check if row and column are valid
                 if (row < 0 || col < 0 || row > 2 || col > 2) {
@@ -82,6 +93,22 @@ public class Menace {
                     System.out.println("That move has already been made.");
                 } else {
                     // Row and column are valid
+                    String combination = "";
+                    for (int i = 0; i<3 ; i++) {
+                        for (int j = 0; j < 3; j++) {
+                            if (i==0 && j==0){
+                                combination = String.valueOf(board[i][j]);
+                                System.out.println(combination);
+                            } else {
+                                combination = combination + String.valueOf(board[i][j]);
+                                System.out.println(combination);
+                            }
+                        }
+                    }
+                    ht.put(combination,"");
+                    System.out.println(ht);
+//                    Document sampleComb = new Document().append()
+//                    coll.insertOne()
                     break;
                 }
             }
