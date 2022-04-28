@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-04-28T02:34:15.520106500Z</date>
+  <millis>1651113255520</millis>
+  <nanos>106500</nanos>
+  <sequence>0</sequence>
+  <logger>Play</logger>
+  <level>INFO</level>
+  <class>Play$ClickHandler</class>
+  <method>endGame</method>
+  <thread>29</thread>
+  <message>Human wins, Date : Wed Apr 27 22:34:15 EDT 2022</message>
+</record>
+<record>
+  <date>2022-04-28T02:34:15.530106500Z</date>
+  <millis>1651113255530</millis>
+  <nanos>106500</nanos>
+  <sequence>1</sequence>
+  <logger>Play</logger>
+  <level>CONFIG</level>
+  <class>Play$ClickHandler</class>
+  <method>endGame</method>
+  <thread>29</thread>
+  <message>Config Data</message>
+</record>
+</log>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-04-28T02:33:40.807334400Z</date>
+  <millis>1651113220807</millis>
+  <nanos>334400</nanos>
+  <sequence>0</sequence>
+  <logger>Play</logger>
+  <level>INFO</level>
+  <class>Play$ClickHandler</class>
+  <method>endGame</method>
+  <thread>29</thread>
+  <message>Menace wins, Date : Wed Apr 27 22:33:40 EDT 2022</message>
+</record>
+<record>
+  <date>2022-04-28T02:33:40.819782Z</date>
+  <millis>1651113220819</millis>
+  <nanos>782000</nanos>
+  <sequence>1</sequence>
+  <logger>Play</logger>
+  <level>CONFIG</level>
+  <class>Play$ClickHandler</class>
+  <method>endGame</method>
+  <thread>29</thread>
+  <message>Config Data</message>
+</record>
+</log>
